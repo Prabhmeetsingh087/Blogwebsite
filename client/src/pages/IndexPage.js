@@ -1,0 +1,29 @@
+import React from 'react'
+import Post from '../Post'
+import Headline from '../Headline'
+import {useEffect, useState} from "react";
+
+const IndexPage = () => {
+
+  const [posts,setPosts] = useState([]); 
+  useEffect(() => {
+    fetch('http://localhost:4000/post').then(response => {
+      response.json().then(posts => { 
+        setPosts(posts);
+      });
+    });
+  }, []);
+
+  return (
+    <>
+      <Headline />
+      <div className='blogGrid'> 
+        {posts.length > 0 && posts.map(post => (
+          <Post {...post} />
+        ))}
+      </div>
+    </>
+  )
+}
+
+export default IndexPage

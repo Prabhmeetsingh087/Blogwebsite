@@ -1,0 +1,92 @@
+.postPageImg{
+    width: 100%;
+    height: calc(15vw + 100px );
+    overflow: hidden;
+}
+
+.postPageImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.postTitle {
+    font-size: calc(1vw + 18px);
+    text-align: center;
+    color: black;
+}
+
+.postDetails{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: calc(0.4vw + 10px);
+}
+
+.postDetails i{
+    font-size: calc(0.4vw + 11.5px);
+}
+
+.editDltBtn{
+    text-decoration: none;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.edit_img_cont, .dlt_img_cont{
+    width: 35%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_img_cont{
+    background: forestgreen;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.dlt_img_cont{
+    background: #cc0000;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.edit_text, .dlt_text{
+    width: 65%;
+}
+
+.edit_img, .dlt_img{
+    width: calc(0.8vw + 15px);
+}
+
+.postEditBtn, .postDltBtn{
+    width: calc(2.5vw + 85px);
+    height: calc(1.5vw + 30px);
+    margin: 0 calc(0.2vw + 5px);
+    letter-spacing: 2px;
+    background: limegreen;
+    /* border: 5px double; */
+    font-size: calc(0.6vw + 12px );
+    border-radius: 10px;
+}
+
+.postEditBtn:hover{
+    transform: scale(1.05);
+    background: limegreen;
+}
+
+.postDltBtn{
+    background: red;
+}
+
+.postDltBtn:hover{
+    transform: scale(1.05);
+    background: red;
+}
